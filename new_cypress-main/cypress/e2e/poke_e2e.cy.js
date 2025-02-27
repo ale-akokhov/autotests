@@ -3,8 +3,8 @@ describe('Автотест e2e на покупку нового аватара',
     it('Верный логин и верный пароль', function () {
          cy.visit('https://pokemonbattle.ru/');
          cy.get('.auth__title').should('be.visible').contains('Битва покемонов');
-         cy.get(':nth-child(1) > .auth__input').type('ale-akokhov@yandex.ru');
-         cy.get('#password').type('Liberation1');
+         cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN');
+         cy.get('#password').type('USER_PASSWORD');
          cy.get('.auth__button').should('be.visible').contains('Войти').click();
          
          cy.wait(2000);
